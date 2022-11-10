@@ -1,0 +1,37 @@
+
+
+
+
+1 --------
+
+Compruebe el funcionamiento de su cluster de dos formas:
+• mediante Cloud Shell
+kubectl get nodes
+az acr list --resource-group AKS --output table
+
+
+• mediante la CLI de Azure
+# Para configurar kubectl para conectarse a su clúster de Kubernetes, use el comando az aks get-credentials.
+# az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+az aks get-credentials --resource-group AKS --name AKS_COMPUNUBE
+
+kubectl get nodes
+
+
+
+2 ------------
+# https://opensource.com/article/20/9/deep-learning-model-kubernetes
+# curl -X POST -F img=@horse.jpeg $(minikube service kubermatic-dl-deployment --url)/predict
+curl -X POST -F img=@horse.JPG http://20.84.23.252/predict  
+
+3 -----------
+# https://learn.microsoft.com/es-es/azure/aks/tutorial-kubernetes-prepare-app?source=recommendations
+# subuir yaml
+# publicar
+kubectl apply -f app2.yaml
+kubectl get pods
+kubectl get services
+52.226.248.12
+
+4 ----
+pregunta 5
